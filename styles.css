@@ -252,13 +252,28 @@ address a {
 }
 
 .header-image,
-#intro {
+.header-content {
     margin: 0;
     padding: 1.5rem;
     border: 1px solid rgba(149, 144, 168, 0.35);
     border-radius: var(--radius-medium);
     background-color: rgba(99, 75, 102, 0.22);
     box-shadow: 0 8px 20px var(--color-shadow);
+}
+
+.header-content #intro,
+.header-content #about {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.header-content #about {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-surface);
 }
 
 .header-image {
@@ -359,12 +374,12 @@ footer a:hover {
     .header-image {
         grid-column: 1;
         margin-bottom: 0;
-        min-height: 360px;
+        min-height: 420px;
     }
 
-    #intro {
+    .header-content {
         grid-column: 2;
-        min-height: 360px;
+        min-height: 420px;
     }
 
     .header-image img {
@@ -381,11 +396,11 @@ footer a:hover {
     }
 
     .header-image,
-    #intro {
-        min-height: 420px;
+    .header-content {
+        min-height: 460px;
     }
 
-    #intro {
+    .header-content {
         padding: 2rem;
     }
 

@@ -304,23 +304,47 @@ footer a:hover {
     color: var(--color-heading);
 }
 
-@media (max-width: 700px) {
-    body {
-        font-size: 1.05rem;
+@media (min-width: 48rem) {
+    header {
+        display: grid;
+        grid-template-columns: 180px 320px minmax(0, 1fr);
+        gap: 2rem;
+        align-items: center;
+        width: min(92%, 1100px);
+        padding: 1.5rem;
     }
 
-    header,
-    main,
-    footer {
-        width: 90%;
+    .header-navigation {
+        grid-column: 1;
+        align-self: stretch;
     }
 
-    nav li {
-        display: block;
-        margin-bottom: 0.5rem;
+    nav ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     nav a {
-        width: auto;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-image {
+        grid-column: 2;
+        margin: 0;
+        align-self: center;
+    }
+
+    .header-image img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    #intro {
+        grid-column: 3;
+        margin: 0;
+        align-self: center;
     }
 }

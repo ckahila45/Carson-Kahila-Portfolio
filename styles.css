@@ -251,6 +251,17 @@ address a {
     font-weight: 600;
 }
 
+/*
+AI Prompt:
+Modify only my CSS file. Do not make any changes to the HTML.
+
+Style the header image card and the Intro/About content card so they share the same visual design. Give both elements matching padding, borders, rounded corners, background color, and box shadows using the existing CSS custom properties and color palette.
+
+Keep the Intro and About sections visually grouped inside the same content card by removing their individual backgrounds, borders, and shadows. Add spacing and a subtle divider above the About section so the two sections remain easy to distinguish.
+
+Make the header image responsive so it fills the available width of its card without exceeding the container. Preserve the image proportions on smaller screens and keep the existing rounded-corner design.
+*/
+
 .header-image,
 .header-content {
     margin: 0;
@@ -366,11 +377,10 @@ footer a:hover {
 AI Prompt:
 Modify only my CSS file. Do not make any changes to the HTML.
 
-For screens 48rem wide and larger, create a responsive CSS Grid layout for the header. Keep the navigation section across the full width at the top. Below the navigation, place the image card in the left column and the combined Intro/About content card in the right column.
-
-Use two equal-width columns that can shrink without overflowing. Add appropriate spacing between the columns and make the image card and content card stretch to matching heights. Remove the image card's bottom margin when the layout becomes two columns.
-
-Make the image fill its card while preserving the design by using object-fit: cover. Keep the existing colors, borders, rounded corners, shadows, typography, and navigation hover styling unchanged. The layout should remain mobile-first, so these Grid changes should only apply at the min-width: 48rem breakpoint.
+At a minimum width of 36rem, update the existing mobile navigation from a vertical
+layout to a horizontal Flexbox layout. Allow the navigation items to wrap when
+needed, center them within the navigation area, and keep the existing colors,
+button styling, rounded corners, and hover effects unchanged.
 */
 
 @media (min-width: 48rem) {

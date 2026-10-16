@@ -127,7 +127,7 @@ nav a:focus {
 }
 
 main {
-    width: min(92%, 1000px);
+    width: min(92%, 1100px);
     margin: 0 auto;
 }
 
@@ -306,12 +306,16 @@ address a {
 }
 
 footer {
-    width: min(92%, 1000px);
+    width: min(92%, 1100px);
     margin: 2rem auto;
     padding: 1.25rem 1.5rem;
     border-top: 1px solid var(--color-surface);
     color: var(--color-muted);
     text-align: center;
+}
+
+footer p {
+    max-width: none;
 }
 
 .footer-brand {
@@ -357,6 +361,17 @@ footer a:hover {
         text-align: center;
     }
 }
+
+/*
+AI Prompt:
+Modify only my CSS file. Do not make any changes to the HTML.
+
+For screens 48rem wide and larger, create a responsive CSS Grid layout for the header. Keep the navigation section across the full width at the top. Below the navigation, place the image card in the left column and the combined Intro/About content card in the right column.
+
+Use two equal-width columns that can shrink without overflowing. Add appropriate spacing between the columns and make the image card and content card stretch to matching heights. Remove the image card's bottom margin when the layout becomes two columns.
+
+Make the image fill its card while preserving the design by using object-fit: cover. Keep the existing colors, borders, rounded corners, shadows, typography, and navigation hover styling unchanged. The layout should remain mobile-first, so these Grid changes should only apply at the min-width: 48rem breakpoint.
+*/
 
 @media (min-width: 48rem) {
     header {

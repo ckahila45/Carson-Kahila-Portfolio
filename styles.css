@@ -209,7 +209,7 @@ figcaption {
 article {
     margin: 1rem 0;
     padding: 1rem 1.1rem;
-    border-left: 4px solid var(--color-surface);
+    border: 1px solid rgba(149, 144, 168, 0.35);
     border-radius: var(--radius-small);
     background-color: rgba(99, 75, 102, 0.2);
 }
@@ -301,10 +301,6 @@ Make the header image responsive so it fills the available width of its card wit
 
 #intro {
     margin-bottom: 0;
-}
-
-#projects article {
-    border-left-color: var(--color-heading);
 }
 
 #skills li {

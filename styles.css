@@ -33,6 +33,30 @@
     --radius-medium: 14px;
 }
 
+body.light-mode {
+    --color-background: #F4F1F5;
+    --color-surface: #C4B1C8;
+    --color-heading: #32183A;
+    --color-text: #332B36;
+    --color-muted: #706575;
+    --color-shadow: rgba(50, 24, 58, 0.16);
+}
+
+body.light-mode .header-navigation,
+body.light-mode .header-image,
+body.light-mode .header-content {
+    background-color: rgba(99, 75, 102, 0.1);
+}
+
+body.light-mode section {
+    background-color: rgba(99, 75, 102, 0.08);
+}
+
+body.light-mode article,
+body.light-mode .header-navigation>p {
+    background-color: rgba(99, 75, 102, 0.08);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -48,6 +72,7 @@ body {
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 1.15rem;
     line-height: 1.65;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 header {
@@ -121,6 +146,27 @@ nav a {
 
 nav a:hover,
 nav a:focus {
+    background-color: var(--color-surface);
+    color: var(--color-heading);
+    transform: translateY(-1px);
+}
+
+.theme-toggle {
+    display: block;
+    margin: 1.25rem auto 0;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--color-surface);
+    border-radius: var(--radius-small);
+    background-color: transparent;
+    color: var(--color-heading);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
     background-color: var(--color-surface);
     color: var(--color-heading);
     transform: translateY(-1px);
